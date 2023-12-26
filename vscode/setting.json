@@ -1,0 +1,24 @@
+{
+    "workbench.colorTheme": "Bearded Theme Arc",
+    "redhat.telemetry.enabled": false,
+    "editor.codeActionsOnSave": {
+    },
+
+    "files.autoSave": "afterDelay",
+    
+    "workbench.colorCustomizations": {
+        "editorCursor.foreground": "#FFFF",
+        "terminalCursor.foreground": "#FFFF",
+        "activityBar.background": "#0d1925",
+        "editor.background": "#0d1925",
+        "panel.background": "#0d1925",
+        "terminal.background": "#0d1925",
+        "sideBar.background": "#0d1925",
+        "input.background": "#0d1925",
+        "editorLineNumber.activeForeground": "#ff0000",
+        "editor.lineHighlightBackground": "#0d1925",
+        "editorGutter.background": "#0d1925",
+        "minimap.background": "#0d1925"
+    },
+    "window.zoomLevel": 1
+}

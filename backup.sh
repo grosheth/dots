@@ -5,7 +5,7 @@ cp -f i3/config i3/config.bak
 echo "i3 backup taken"
 
 # i3status
-cp -f i3/i3status/config i3/i3status/config
+cp -f i3status/config i3status/config
 echo "i3status backup taken"
 
 # kitty

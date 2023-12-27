@@ -188,7 +188,7 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 
 bar {
-        status_command i3status
+        status_command i3blocks -c ~/.config/i3blocks/i3blocks.conf
         separator_symbol "|/|"
         workspace_buttons no
         colors {
@@ -203,7 +203,6 @@ bar {
                 binding_mode       #2f343a #900000 #ffffff
         }
         # position top
-        
 }
 
 # Setup Wallpaper

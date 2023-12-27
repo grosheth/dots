@@ -188,8 +188,8 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 
 bar {
-        status_command i3blocks -c ~/.config/i3blocks/i3blocks.conf
-        separator_symbol "|/|"
+        status_command SCRIPT_DIR=/home/salledelavage/.config/i3blocks/i3blocks-contrib/ i3blocks -c ~/.config/i3blocks/i3blocks.conf
+        separator_symbol "||"
         workspace_buttons no
         colors {
                 background #0d1925

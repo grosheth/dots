@@ -1,1 +1,2 @@
-/home/salledelavage/.config/compton.conf
+inactive-opacity = 0.80;
+opacity-rule = [ "99:class_g *?= 'brave'"];

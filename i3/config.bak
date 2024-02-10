@@ -11,6 +11,10 @@
 
 set $mod Mod1
 
+set $monitor1 HDMI-2
+set $monitor2 HDMI-1
+set $monitor3 DP-2
+
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
 font pango:monospace 8.5
@@ -53,7 +57,7 @@ tiling_drag modifier titlebar
 bindsym $mod+Return exec kitty
 
 # kill focused window
-bindsym $mod+Shift+q kill
+bindsym $mod+c kill
 
 # start dmenu (a program launcher)
 bindsym $mod+d exec --no-startup-id dmenu_run
@@ -187,33 +191,36 @@ bindsym $mod+r mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 
-bar {
-        status_command SCRIPT_DIR=/home/salledelavage/.config/i3blocks/i3blocks-contrib/ i3blocks -c ~/.config/i3blocks/i3blocks.conf
-        separator_symbol "||"
-        workspace_buttons no
-        colors {
-                background #0d1925
-                statusline #d9e5f1
-                separator #666666
+# bar {
+#         status_command SCRIPT_DIR=/home/salledelavage/.config/i3blocks/i3blocks-contrib/ i3blocks -c ~/.config/i3blocks/i3blocks.conf
+#         separator_symbol "||"
+#         workspace_buttons no
+#         colors {
+#                 background #0d1925
+#                 statusline #d9e5f1
+#                 separator #666666
 
-                focused_workspace  #4c7899 #285577 #ffffff
-                active_workspace   #333333 #5f676a #ffffff
-                inactive_workspace #333333 #222222 #888888
-                urgent_workspace   #2f343a #900000 #ffffff
-                binding_mode       #2f343a #900000 #ffffff
-        }
-        # position top
-}
+#                 focused_workspace  #4c7899 #285577 #ffffff
+#                 active_workspace   #333333 #5f676a #ffffff
+#                 inactive_workspace #333333 #222222 #888888
+#                 urgent_workspace   #2f343a #900000 #ffffff
+#                 binding_mode       #2f343a #900000 #ffffff
+#         }
+#         # position top
+# }
 
 # Setup Wallpaper
-exec --no-startup-id feh --bg-scale /home/salledelavage/wallpaper/coffee.jpg
+exec --no-startup-id feh --bg-scale /home/salledelavage/nixos-configs/ags/assets/nasa.png
 
 # Setup transparency
-exec --no-startup-id compton
+# exec --no-startup-id picom
+exec --no-startup-id xrandr --output $monitor2 --pos 0x0
+exec --no-startup-id xrandr --output $monitor1 --pos 2560x0
+exec --no-startup-id xrandr --output $monitor3 --pos 5120x0
 
 # Windows Gaps
-gaps inner 20
-gaps outer 10
+# gaps inner 20
+# gaps outer 10
 
 # title bar size
 new_window 1pixel
